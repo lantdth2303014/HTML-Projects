@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Liberty Electronics | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="slider-nav.js"></script>
+</head>
+
+<body class="contact-page">
+    
+    <!------------------------ header ------------------------------>
+    <header class="header">
+        <a href="index.html" class="Logo"><span>Liberty</span>Electronics</a>
+
+        <nav class="navbar">
+            <a href="index.html">Store</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="activity-section">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        </div>
+
+        <button class="btn">
+            <a href="login.html">Login</a>
+        </button>
+
+        <script>
+        const cartIcon = document.getElementById('cart-icon');
+
+        cartIcon.addEventListener('click', function() {
+            // Redirect to the cart page when the shopping bag icon is clicked
+            window.location.href = 'cart.html';
+        });
+        </script>
+    </header>
+
+    <!------------------------ contact us page ------------------------------>
+    <section class="location">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d272536.
+        64167271677!2d-79.822495465548!3d41.47239810978412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+        1!3m3!1m2!1s0x88331c1c68fcb635%3A0x1ce8db17c5cc3cec!2s189%20Howard%20St%2C%20Franklin
+        %2C%20PA%2016323%2C%20USA!5e0!3m2!1sen!2s!4v1695528671013!5m2!1sen!2s" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <section class="contact-us">
+
+        <div class="row">
+            <div class="contact-col">
+
+                <div>
+                    <i class='bx bxs-home'></i>
+                    <span>
+                        <h5>189 Howard St, Franklin</h5>
+                        <p>PA 16323, USA</p>
+                    </span>
+                </div>
+
+                <div>
+                    <i class='bx bxs-phone'></i>
+                    <span>
+                        <h5>+1 814-432-7505</h5>
+                        <p>Monday to Friday, 8AM to 5PM</p>
+                    </span>
+                </div>
+
+                <div>
+                    <i class='bx bxs-envelope'></i>
+                    <span>
+                        <h5>xyz@gmail.com</h5>
+                        <p>Email us</p>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="contact-col">
+                
+                <form action="">
+                    <input type="text" placeholder="Enter your name" required>
+                    <input type="email" placeholder="Enter email address" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea rows="8" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn">
+                        <a href="">Send</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <!------------------------ footer ------------------------------>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3><span>Liberty</span>Electronics</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Store</a>
+                |
+                <a href="products.html">Products</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="contact.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Liberty Electronics</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class='bx bxs-map'></i>
+                <p><span>189 Howard St, Franklin</span>
+                    PA 16323, USA</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-phone'></i>
+                <p>+1 814-432-7505</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-envelope'></i>
+                <p><a href="#">xyz@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About us</span>
+                Technology nerver sleeps, nor should the action. For those keen on winning power, <strong>Liberty Electronics</strong> awaits. Driven by relentless innovation, <strong>Liberty Electronics</strong> is committed to selling out-of-this-world experiences for everyone everywhere.
+            </p>
+
+            <div class="footer-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

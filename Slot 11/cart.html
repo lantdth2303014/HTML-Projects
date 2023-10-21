@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Liberty Electronics | Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!------------------------ header ------------------------------>
+    <header class="header">
+        <a href="index.html" class="Logo"><span>Liberty</span>Electronics</a>
+
+        <nav class="navbar">
+            <a href="index.html">Store</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="activity-section">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        </div>
+
+        <button class="btn">
+            <a href="login.html">Login</a>
+        </button>
+
+        <script>
+        const cartIcon = document.getElementById('cart-icon');
+
+        cartIcon.addEventListener('click', function() {
+            // Redirect to the cart page when the shopping bag icon is clicked
+            window.location.href = 'cart.html';
+        });
+        </script>
+    </header>
+
+    
+    <!------------------------ cart section ------------------------------>
+    <section class="cart">
+        <h1>Your Cart</h1>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-list"></tbody>
+        </table>
+        
+        <p>Total: <span>$</span><span id="cart-total"></span></p>
+    </section>
+    
+    <script>
+
+        function loadCart() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartList = document.getElementById('cart-list');
+        const cartTotal = document.getElementById('cart-total');
+        let total = 0;
+
+        if (cart.length === 0) {
+        cartList.innerHTML = '<tr><td colspan="4">Your cart is empty</td></tr>';
+        } else {
+        cartList.innerHTML = ''; 
+        cart.forEach((item, index) => {
+            const row = document.createElement('tr');
+
+            // Create a <td> for the product
+            const productCell = document.createElement('td');
+
+            // Create an <img> element for the product image
+            const image = document.createElement('img');
+            image.className = 'product-image';
+            image.src = item.imageURL; 
+            productCell.appendChild(image);
+
+            // Create a <span> for the product name
+            const name = document.createElement('span');
+            name.textContent = item.productName;
+            productCell.appendChild(name);
+
+            row.appendChild(productCell);
+
+            row.innerHTML = `
+                <td>
+                    <img class="product-image" src="${item.imageURL}" alt="${item.productName}">
+                    <div class="product-info">
+                        <span>${item.productName}</span>
+                        <span class="additional-info">In Stock</span>
+                    </div>
+                </td>
+                <td>
+                    <input class="quantity-amt" type="number" value="${item.quantity || 1}" min="1" oninput="updateQuantity(${index}, this.value)">
+                </td>
+                <td>
+                    $${(item.price * (item.quantity || 1)).toFixed(2)}
+                </td>
+                <td>
+                    <button class="remove-button" onclick="removeFromCart(${index})">&#10006;</button>
+                </td>
+            `;
+                cartList.appendChild(row);
+                total += item.price * (item.quantity || 1);
+            });
+        }
+
+        cartTotal.textContent = total.toFixed(2);
+    }
+
+    function updateQuantity(index, newQuantity) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart[index].quantity = parseInt(newQuantity, 10);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart();
+    }
+
+    function removeFromCart(index) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart();
+    }
+
+    loadCart();
+
+    </script>
+
+    <!------------------------ footer ------------------------------>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3><span>Liberty</span>Electronics</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Store</a>
+                |
+                <a href="products.html">Products</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="contact.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Liberty Electronics</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class='bx bxs-map'></i>
+                <p><span>189 Howard St, Franklin</span>
+                    PA 16323, USA</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-phone'></i>
+                <p>+1 814-432-7505</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-envelope'></i>
+                <p><a href="#">xyz@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About us</span>
+                Technology nerver sleeps, nor should the action. For those keen on winning power, <strong>Liberty Electronics</strong> awaits. Driven by relentless innovation, <strong>Liberty Electronics</strong> is committed to selling out-of-this-world experiences for everyone everywhere.
+            </p>
+
+            <div class="footer-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Liberty Electronics | Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="slider-nav.js"></script>
+    <script src="compareStorage.js"></script>
+</head>
+
+<body>
+    
+    <!------------------------ header ------------------------------>
+    <header class="header">
+        <a href="index.html" class="Logo"><span>Liberty</span>Electronics</a>
+
+        <nav class="navbar">
+            <a href="index.html">Store</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="activity-section">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        </div>
+
+        <button class="btn">
+            <a href="login.html">Login</a>
+        </button>
+
+        <script>
+        const cartIcon = document.getElementById('cart-icon');
+
+        cartIcon.addEventListener('click', function() {
+            // Redirect to the cart page when the shopping bag icon is clicked
+            window.location.href = 'cart.html';
+        });
+        </script>
+    </header>
+
+    <!------------------------ products section ------------------------------>
+    <section class="products-section1">
+
+        <input type="button" value="> Compare" onclick="compareProducts()" class="compare-button">
+
+        <div class="row1">
+            <h2 class="heading"><span>All</span> Products</h2>
+
+            <select onchange="location = this.value;">
+                <option value="products.html">Show All Products</option>
+                <option value="products1.html">Show Apple Products</option>
+                <option value="products2.html">Show Samsung Products</option>
+                <option value="products3.html">Show Xiaomi Products</option>
+            </select>
+        </div>
+        
+        <div class="productGalleryC">
+
+            <div class="product-imageC">
+                <img src="images/samsung1.png" alt="Samsung Galaxy S23 Ultra">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy S23 Ultra</h2>
+
+                    <ul>
+                        <li>6.8-inch display</li>
+                        <li>200MP camera</li>
+                        <li>12GB RAM</li>
+                        <li>5000mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$1,199</p>
+                        <a href="products-details.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product1" name="product1" value='{"Name": "Samsung Galaxy S23 Ultra", "Specifications": "6.8-inch, 200MP, 12GB, 5000mAh", "Image": "images/samsung1.png", "Price": "$1,199", "Brand": "Samsung"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/apple2.png" alt="iPad Pro 11-inch 2022 M2">
+                <div class="inner-text">
+                    <h2>iPad Pro 11" 2022 M2 Wifi 128GB</h2>
+
+                    <ul>
+                        <li>11-inch display</li>
+                        <li>12MP camera</li>
+                        <li>8GB RAM</li>
+                        <li>7538mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$999</p>
+                        <a href="products-details2.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product2" name="product2" value='{"Name": "iPad Pro 11-inch 2022 M2", "Specifications": "11-inch, 12MP, 8GB, 7538mAh", "Image": "images/apple2.png", "Price": "$999", "Brand": "Apple"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/apple3.png" alt="Apple Watch Series 8">
+                <div class="inner-text">
+                    <h2>Apple Watch Series 8 Aluminum</h2>
+
+                    <ul>
+                        <li>1.9-inch display</li>
+                        <li>Heart rate monitor</li>
+                        <li>1GB RAM</li>
+                        <li>308mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$340</p>
+                        <a href="products-details3.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product3" name="product3" value='{"Name": "Apple Watch Series 8", "Specifications": "1.9-inch, Heart rate monitor, 1GB, 308mAh", "Image": "images/apple3.png", "Price": "$340", "Brand": "Apple"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/xiaomi1.png" alt="Xiaomi 13 Ultra">
+                <div class="inner-text">
+                    <h2>Xiaomi 13 Ultra 12GB 256GB</h2>
+
+                    <ul>
+                        <li>6.36-inch display</li>
+                        <li>50MP camera</li>
+                        <li>12GB RAM</li>
+                        <li>4500mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$913</p>
+                        <a href="products-details4.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product4" name="product4" value='{"Name": "Xiaomi 13 Ultra", "Specifications": "6.36-inch, 50MP, 12GB, 4500mAh", "Image": "images/xiaomi1.png", "Price": "$913", "Brand": "Xiaomi"}'>
+                        <label for="product2">Compare Product</label><br>                                      
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="products-section2">
+
+        <div class="productGalleryC">
+
+            <div class="product-imageC">
+                <img src="images/samsung2.png" alt="Samsung Galaxy Tab S8">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy Tab S8 Wifi</h2>
+
+                    <ul>
+                        <li>11-inch display</li>
+                        <li>13MP camera</li>
+                        <li>8GB RAM</li>
+                        <li>8000mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$755</p>
+                        <a href="products-details5.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product5" name="product5" value='{"Name": "Samsung Galaxy Tab S8", "Specifications": "11-inch, 13MP, 8GB, 8000mAh", "Image": "images/samsung2.png", "Price": "$755", "Brand": "Samsung"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/apple1.png" alt="iPhone 14 Pro Max">
+                <div class="inner-text">
+                    <h2>iPhone 14 Pro Max 6GB 128GB</h2>
+
+                    <ul>
+                        <li>6.7-inch display</li>
+                        <li>48MP camera</li>
+                        <li>6GB RAM</li>
+                        <li>4323mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$1,099</p>
+                        <a href="products-details9.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product9" name="product9" value='{"Name": "iPhone 14 Pro Max", "Specifications": "6.7-inch, 48MP, 6GB, 4323mAh", "Image": "images/apple1.png", "Price": "$1,099", "Brand": "Apple"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/apple2.png" alt="iPad Pro">
+                <div class="inner-text">
+                    <h2>iPad Pro 11" 2022 M2 Wifi 128GB</h2>
+
+                    <ul>
+                        <li>11-inch display</li>
+                        <li>12MP camera</li>
+                        <li>8GB RAM</li>
+                        <li>7538mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$999</p>
+                        <a href="products-details2.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product2" name="product2" value='{"Name": "iPad Pro 11-inch 2022 M2", "Specifications": "11-inch, 12MP, 8GB, 7538mAh", "Image": "images/apple2.png", "Price": "$999", "Brand": "Apple"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/xiaomi3.png" alt="Xiaomi Watch S1 Active">
+                <div class="inner-text">
+                    <h2>Xiaomi Watch S1 Active Pro Steel</h2>
+
+                    <ul>
+                        <li>1.43-inch display</li>
+                        <li>Heart rate monitor</li>
+                        <li>1GB RAM</li>
+                        <li>470mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$145</p>
+                        <a href="products-details6.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product6" name="product6" value='{"Name": "Xiaomi Watch S1 Active", "Specifications": "1.43-inch, Heart rate monitor, 1GB, 470mAh", "Image": "images/xiaomi3.png", "Price": "$145", "Brand": "Xiaomi"}'>
+                        <label for="product2">Compare Product</label><br>                                      
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="products-section3">
+
+        <div class="productGalleryC">
+
+            <div class="product-imageC">
+                <img src="images/xiaomi2.png" alt="Xiaomi Pad 6 Pro">
+                <div class="inner-text">
+                    <h2>Xiaomi Pad 6 Pro Wifi 8GB 128GB</h2>
+
+                    <ul>
+                        <li>11-inch display</li>
+                        <li>13MP camera</li>
+                        <li>8GB RAM</li>
+                        <li>8840mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$563</p>
+                        <a href="products-details7.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product7" name="product7" value='{"Name": "Xiaomi Pad 6 Pro", "Specifications": "11-inch, 13MP, 8GB, 8840mAh", "Image": "images/xiaomi2.png", "Price": "$563", "Brand": "Xiaomi"}'>
+                        <label for="product2">Compare Product</label><br>                                      
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/samsung3.png" alt="Samsung Galaxy Watch 4">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy Watch 4 40mm</h2>
+
+                    <ul>
+                        <li>1.5-inch display</li>
+                        <li>Heart rate monitor</li>
+                        <li>2GB RAM</li>
+                        <li>425mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$399</p>
+                        <a href="products-details8.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product8" name="product8" value='{"Name": "Samsung Galaxy Watch 4", "Specifications": "1.5-inch, Heart rate monitor, 2GB, 425mAh", "Image": "images/samsung3.png", "Price": "$399", "Brand": "Samsung"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/xiaomi1.png" alt="Xiaomi 13 Ultra">
+                <div class="inner-text">
+                    <h2>Xiaomi 13 Ultra 12GB 256GB</h2>
+
+                    <ul>
+                        <li>6.36-inch display</li>
+                        <li>50MP camera</li>
+                        <li>12GB RAM</li>
+                        <li>7538mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$913</p>
+                        <a href="products-details4.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product4" name="product4" value='{"Name": "Xiaomi 13 Ultra", "Specifications": "6.36-inch, 50MP, 12GB, 4500mAh", "Image": "images/xiaomi1.png", "Price": "$913", "Brand": "Xiaomi"}'>
+                        <label for="product2">Compare Product</label><br>                                      
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/samsung1.png" alt="Samsung Galaxy S23 Ultra">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy S23 Ultra</h2>
+
+                    <ul>
+                        <li>6.8-inch display</li>
+                        <li>200MP camera</li>
+                        <li>12GB RAM</li>
+                        <li>5000mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$1,199</p>
+                        <a href="products-details.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product1" name="product1" value='{"Name": "Samsung Galaxy S23 Ultra", "Specifications": "6.8-inch, 200MP, 12GB, 5000mAh", "Image": "images/samsung1.png", "Price": "$1,199", "Brand": "Samsung"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594;</span>
+    </div>
+
+    <!------------------------ footer ------------------------------>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3><span>Liberty</span>Electronics</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Store</a>
+                |
+                <a href="products.html">Products</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="contact.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Liberty Electronics</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class='bx bxs-map'></i>
+                <p><span>189 Howard St, Franklin</span>
+                    PA 16323, USA</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-phone'></i>
+                <p>+1 814-432-7505</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-envelope'></i>
+                <p><a href="#">xyz@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About us</span>
+                Technology nerver sleeps, nor should the action. For those keen on winning power, <strong>Liberty Electronics</strong> awaits. Driven by relentless innovation, <strong>Liberty Electronics</strong> is committed to selling out-of-this-world experiences for everyone everywhere.
+            </p>
+
+            <div class="footer-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

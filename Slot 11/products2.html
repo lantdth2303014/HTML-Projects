@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Liberty Electronics | Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="slider-nav.js"></script>
+    <script src="compareStorage.js"></script>
+</head>
+
+<body>
+    
+    <!------------------------ header ------------------------------>
+    <header class="header">
+        <a href="index.html" class="Logo"><span>Liberty</span>Electronics</a>
+
+        <nav class="navbar">
+            <a href="index.html">Store</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="activity-section">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        </div>
+
+        <button class="btn">
+            <a href="login.html">Login</a>
+        </button>
+
+        <script>
+        const cartIcon = document.getElementById('cart-icon');
+
+        cartIcon.addEventListener('click', function() {
+            // Redirect to the cart page when the shopping bag icon is clicked
+            window.location.href = 'cart.html';
+        });
+        </script>
+    </header>
+
+    <!------------------------ products section ------------------------------>
+    <section class="products-section1">
+
+        <input type="button" value="> Compare" onclick="compareProducts()" class="compare-button">
+
+        <div class="row1">
+            <h2 class="heading"><span>Samsung</span> Products</h2>
+
+            <select onchange="location = this.value;">
+                <option value="products2.html">Show Samsung Products</option>
+                <option value="products.html">Show All Products</option>
+                <option value="products1.html">Show Apple Products</option>
+                <option value="products3.html">Show Xiaomi Products</option>
+            </select>
+        </div>
+
+        <div class="productGalleryC">
+
+            <div class="product-imageC">
+                <img src="images/samsung1.png" alt="Samsung Galaxy S23 Ultra">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy S23 Ultra</h2>
+
+                    <ul>
+                        <li>6.8-inch display</li>
+                        <li>200MP camera</li>
+                        <li>12GB RAM</li>
+                        <li>5000mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$1,199</p>
+                        <a href="products-details.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product1" name="product1" value='{"Name": "Samsung Galaxy S23 Ultra", "Specifications": "6.8-inch, 200MP, 12GB, 5000mAh", "Image": "images/samsung1.png", "Price": "$1,199", "Brand": "Samsung"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/samsung2.png" alt="Samsung Galaxy Tab S8">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy Tab S8 Wifi</h2>
+
+                    <ul>
+                        <li>11-inch display</li>
+                        <li>13MP camera</li>
+                        <li>8GB RAM</li>
+                        <li>8000mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$755</p>
+                        <a href="products-details5.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product5" name="product5" value='{"Name": "Samsung Galaxy Tab S8", "Specifications": "11-inch, 13MP, 8GB, 8000mAh", "Image": "images/samsung2.png", "Price": "$755", "Brand": "Samsung"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/samsung3.png" alt="Samsung Galaxy Watch 4">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy Watch 4 40mm</h2>
+
+                    <ul>
+                        <li>1.5-inch display</li>
+                        <li>Heart rate monitor</li>
+                        <li>2GB RAM</li>
+                        <li>425mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$399</p>
+                        <a href="products-details8.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product8" name="product8" value='{"Name": "Samsung Galaxy Watch 4", "Specifications": "1.5-inch, Heart rate monitor, 2GB, 425mAh", "Image": "images/samsung3.png", "Price": "$399", "Brand": "Samsung"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-imageC">
+                <img src="images/samsung1.png" alt="Samsung Galaxy S23 Ultra">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy S23 Ultra</h2>
+
+                    <ul>
+                        <li>6.8-inch display</li>
+                        <li>200MP camera</li>
+                        <li>12GB RAM</li>
+                        <li>5000mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$1,199</p>
+                        <a href="products-details.html"><span>Buy</span></a>
+                    </div>
+
+                    <form class="productForm">
+                        <input type="checkbox" id="product1" name="product1" value='{"Name": "Samsung Galaxy S23 Ultra", "Specifications": "6.8-inch, 200MP, 12GB, 5000mAh", "Image": "images/samsung1.png", "Price": "$1,199", "Brand": "Samsung"}'>
+                        <label for="product1">Compare Product</label><br>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="page-btn">
+        <span>1</span>
+        <span>&#8594;</span>
+    </div>
+
+    <!------------------------ footer ------------------------------>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3><span>Liberty</span>Electronics</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Store</a>
+                |
+                <a href="products.html">Products</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="contact.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Liberty Electronics</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class='bx bxs-map'></i>
+                <p><span>189 Howard St, Franklin</span>
+                    PA 16323, USA</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-phone'></i>
+                <p>+1 814-432-7505</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-envelope'></i>
+                <p><a href="#">xyz@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About us</span>
+                Technology nerver sleeps, nor should the action. For those keen on winning power, <strong>Liberty Electronics</strong> awaits. Driven by relentless innovation, <strong>Liberty Electronics</strong> is committed to selling out-of-this-world experiences for everyone everywhere.
+            </p>
+
+            <div class="footer-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Liberty Electronics | Apple Watch Series 8 Aluminum</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="slider-nav.js"></script>
+</head>
+
+<body>
+    
+    <!------------------------ header ------------------------------>
+    <header class="header">
+        <a href="index.html" class="Logo"><span>Liberty</span>Electronics</a>
+
+        <nav class="navbar">
+            <a href="index.html">Store</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="activity-section">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        </div>
+
+        <button class="btn">
+            <a href="login.html">Login</a>
+        </button>
+
+        <script>
+        const cartIcon = document.getElementById('cart-icon');
+
+        cartIcon.addEventListener('click', function() {
+            // Redirect to the cart page when the shopping bag icon is clicked
+            window.location.href = 'cart.html';
+        });
+        </script>
+    </header>
+
+    <!------------------------ products section ------------------------------>
+    <section class="product-detail">
+
+        <div class="small-container">
+
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/apple3.png" width="100%">
+                </div>
+    
+                <div class="col-2">
+                    <p>Products > Apple > Smart Watch</p>
+                    <h1>Apple Watch Series 8 Aluminum</h1>
+                    <h4>$340</h4>
+
+                    <select>
+                        <option>Black</option>
+                        <option>White Gold</option>
+                        <option>White</option>
+                        <option>Red</option>
+                    </select>
+
+                    <input type="number" value="1">
+
+                    <button onclick="addToCart('Apple Watch Series 8 Aluminum', 340, 'images/apple3.png')" class="buyBtn">
+                        <a href="cart.html">Add to Cart</a>
+                    </button>
+
+                    <h3>Product Details</h3>
+                    <ul>
+                        <li>Youthful, modern style - Ion-X tempered glass, durable aluminum bezel</li>
+                        <li>Super smooth - Equipped with Apple S8 chip and operating system</li>
+                        <li>Full health utilities - Measures electrocardiogram, blood oxygen, sleep tracking, stress levels…</li>
+                        <li>Many workout modes - Calculates running distance, counts steps, cycling, swimming, supports connection with bluetooth headphones</li>
+                        <li>Records workout distance - Integrates 5 global positioning systems GPS, GLONASS, Galileo, QZSS, BDS</li>
+                        <li>Convenient smart features - Weather forecast, alarm clock, voice assistant</li>
+                    </ul>
+
+                    <a href="docs/Doc3.docx" target="_blank" class="detailed-link">View Detailed Configuration</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function addToCart(productName, price, imageURL) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ productName, price, imageURL }); 
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+
+    <section class="products-section">
+        <h2 class="heading"><span>Related</span> Products</h2>
+
+        <div class="productGallery">
+
+            <div class="product-image">
+                <img src="images/samsung1.png" alt="Samsung Galaxy S23 Ultra">
+                <div class="inner-text">
+                    <h2>Samsung Galaxy S23 Ultra</h2>
+
+                    <ul>
+                        <li>6.8-inch display</li>
+                        <li>200MP camera</li>
+                        <li>12GB RAM</li>
+                        <li>5000mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$1,199</p>
+                        <a href="products-details.html"><span>Buy</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-image">
+                <img src="images/apple2.png" alt="iPad Pro">
+                <div class="inner-text">
+                    <h2>iPad Pro 11" 2022 M2 Wifi 128GB</h2>
+
+                    <ul>
+                        <li>11-inch display</li>
+                        <li>12MP camera</li>
+                        <li>8GB RAM</li>
+                        <li>7538mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$999</p>
+                        <a href="products-details2.html"><span>Buy</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-image">
+                <img src="images/apple3.png" alt="Apple Watch Series 8">
+                <div class="inner-text">
+                    <h2>Apple Watch Series 8 Aluminum</h2>
+
+                    <ul>
+                        <li>1.9-inch display</li>
+                        <li>Heart rate monitor</li>
+                        <li>1GB RAM</li>
+                        <li>308mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$340</p>
+                        <a href="products-details3.html"><span>Buy</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-image">
+                <img src="images/xiaomi1.png" alt="Xiaomi 13 Ultra">
+                <div class="inner-text">
+                    <h2>Xiaomi 13 Ultra 12GB 256GB</h2>
+
+                    <ul>
+                        <li>6.36-inch display</li>
+                        <li>50MP camera</li>
+                        <li>12GB RAM</li>
+                        <li>7538mAh battery</li>
+                    </ul>
+
+                    <div class="price">
+                        <p>$913</p>
+                        <a href="products-details4.html"><span>Buy</span></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!------------------------ footer ------------------------------>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3><span>Liberty</span>Electronics</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Store</a>
+                |
+                <a href="#">Products</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="contact.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Liberty Electronics</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class='bx bxs-map'></i>
+                <p><span>189 Howard St, Franklin</span>
+                    PA 16323, USA</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-phone'></i>
+                <p>+1 814-432-7505</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-envelope'></i>
+                <p><a href="#">xyz@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About us</span>
+                Technology nerver sleeps, nor should the action. For those keen on winning power, <strong>Liberty Electronics</strong> awaits. Driven by relentless innovation, <strong>Liberty Electronics</strong> is committed to selling out-of-this-world experiences for everyone everywhere.
+            </p>
+
+            <div class="footer-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

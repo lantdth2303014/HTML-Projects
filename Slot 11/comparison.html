@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liberty Electronics | Product Comparison</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        td>img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <!------------------------ header ------------------------------>
+    <header class="header">
+        <a href="index.html" class="Logo"><span>Liberty</span>Electronics</a>
+
+        <nav class="navbar">
+            <a href="index.html">Store</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="activity-section">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        </div>
+
+        <button class="btn">
+            <a href="login.html">Login</a>
+        </button>
+
+        <script>
+        const cartIcon = document.getElementById('cart-icon');
+
+        cartIcon.addEventListener('click', function() {
+            // Redirect to the cart page when the shopping bag icon is clicked
+            window.location.href = 'cart.html';
+        });
+        </script>
+    </header>
+
+    <section class="comparison-page">
+
+        <h2 class="heading">Product <span>Comparison</span></h2>
+        
+        <div class="table-responsive">
+
+            <table id="comparison" class="comparison-table"></table>
+        
+            <script>
+                window.onload = function() {
+                var productsToCompare = JSON.parse(localStorage.getItem('productsToCompare'));
+          
+                var comparisonTable = document.getElementById('comparison');
+          
+                // Create a table row for each attribute
+                var attributes = ['Name', 'Image', 'Price', 'Specifications', 'Brand'];
+                for (var i = 0; i < attributes.length; i++) {
+                    var attributeRow = document.createElement('tr');
+                        
+                    var attributeCell = document.createElement('th');
+                    attributeCell.textContent = attributes[i];
+                    attributeRow.appendChild(attributeCell);
+        
+                    for (var j = 0; j < productsToCompare.length; j++) {
+                        var productCell = document.createElement('td');
+                        
+                        // If the attribute is 'image', create an img element and set its src to the image URL
+                        if (attributes[i] === 'Image') {
+                            var img = document.createElement('img');
+                            img.src = productsToCompare[j][attributes[i]];
+                            img.alt = productsToCompare[j]['name'];
+                            productCell.appendChild(img);
+                        } 
+                        // If the attribute is 'specifications', split the value by comma and add a line break after each item
+                        else if (attributes[i] === 'Specifications') {
+                            var specs = productsToCompare[j][attributes[i]].split(', ');
+                            productCell.innerHTML = specs.join('<br>');
+                        } else {
+                            productCell.textContent = productsToCompare[j][attributes[i]];
+                        }
+                        
+                        attributeRow.appendChild(productCell);
+                    }
+        
+                    comparisonTable.appendChild(attributeRow);
+                }
+            }
+            </script>
+
+        </div>
+        
+    </section>
+
+     <!------------------------ footer ------------------------------>
+     <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3><span>Liberty</span>Electronics</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Store</a>
+                |
+                <a href="products.html">Products</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="contact.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Liberty Electronics</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class='bx bxs-map'></i>
+                <p><span>189 Howard St, Franklin</span>
+                    PA 16323, USA</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-phone'></i>
+                <p>+1 814-432-7505</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-envelope'></i>
+                <p><a href="#">xyz@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About us</span>
+                Technology nerver sleeps, nor should the action. For those keen on winning power, <strong>Liberty Electronics</strong> awaits. Driven by relentless innovation, <strong>Liberty Electronics</strong> is committed to selling out-of-this-world experiences for everyone everywhere.
+            </p>
+
+            <div class="footer-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js "></script>
+</body>
+
+</html>
